@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "wordpress-rest": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "wordpress-mcp-server"
+      ],
+      "env": {
+        "WORDPRESS_SITE_URL": "http://your-wordpress-site.local",
+        "WORDPRESS_USERNAME": "your_username",
+        "WORDPRESS_PASSWORD": "your_application_password_here"
+      }
+    },
+    "wordpress-official-adapter": {
+      "command": "npm",
+      "args": [
+        "--prefix",
+        "C:/path/to/your/wordpress/installation",
+        "run",
+        "env:cli",
+        "--",
+        "mcp-adapter",
+        "serve"
+      ]
+    }
+  }
+}
